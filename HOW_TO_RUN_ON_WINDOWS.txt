@@ -1,0 +1,34 @@
+MAYIMUNAH'S APPLICATION TRACKER — WINDOWS SETUP
+
+The easiest option is the hosted private version:
+https://mayimunah-application-tracker.ruvarashe02.chatgpt.site
+
+To run your own copy on your Windows PC:
+
+1. Install Node.js 22.13 or newer from https://nodejs.org/
+2. Extract this ZIP to a normal folder, for example:
+   C:\Users\Mayimunah\Documents\application-tracker
+3. Open PowerShell inside the extracted folder.
+4. Run:
+   npm ci
+5. When installation finishes, run:
+   npx vite --host 127.0.0.1
+6. Open the local address shown in PowerShell. It will normally be:
+   http://localhost:5173
+
+IMPORTANT
+
+- The hosted tracker and the copy on your PC are separate copies.
+- Editing the code on your PC will not update the hosted website.
+- Updates made to the website in ChatGPT will not automatically replace your
+  PC copy.
+- Tracker progress and notes are saved in the browser being used. Use the
+  Backup button before clearing browser data or moving to another device.
+
+MAIN FILES
+
+- app/page.tsx: opportunities, application logic and page structure
+- app/globals.css: colours and visual design
+- app/layout.tsx: browser title and metadata
+- package.json: project dependencies and commands
+
