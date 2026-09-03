@@ -1,5 +1,6 @@
 import vinext from "vinext";
 import { nitro } from "nitro/vite";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import { sites } from "./build/sites-vite-plugin";
 
@@ -16,6 +17,7 @@ export default defineConfig({
   },
 
   plugins: [
+    tailwindcss(),
     vinext(),
     sites(),
     nitro(),
