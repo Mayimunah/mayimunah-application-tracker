@@ -19,3 +19,70 @@ button,input,textarea { font:inherit; }
 .action-step>span { display:grid; height:1.6rem; width:1.6rem; flex:0 0 auto; place-items:center; border-radius:999px; background:#d96b3b; font-weight:800; }
 .action-step strong { display:block; font-size:.92rem; }.action-step p { margin-top:.25rem; line-height:1.45; color:#cedee6; }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Application tracker: scoped styles preserve the project's existing theme. */
+.phd-app { background:#f5f4ef; min-height:100vh; color:#203b45; font-family:"Segoe UI",Arial,sans-serif; border-top:5px solid #2d766f; }
+.phd-shell { max-width:1320px; margin:auto; padding:48px 28px; }
+.phd-header { display:flex; align-items:flex-start; justify-content:space-between; gap:32px; margin-bottom:34px; }
+.phd-header>div:first-child { max-width:740px; }
+.phd-app h1 { font-family:Georgia,serif; font-size:clamp(2rem,4vw,3.2rem); line-height:1.13; font-weight:normal; letter-spacing:-.035em; margin:10px 0 18px; }
+.phd-app h2 { font-size:1.35rem; line-height:1.35; font-weight:650; margin:6px 0 12px; }
+.phd-app h3 { font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; font-weight:700; margin:0 0 8px; color:#556b70; }
+.phd-app p { line-height:1.65; margin:8px 0; }
+.phd-app .phd-eyebrow { font-size:.72rem; font-weight:750; text-transform:uppercase; letter-spacing:.17em; color:#39756e; }
+.phd-actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.phd-header .phd-actions { max-width:285px; flex-shrink:0; }
+.phd-app button,.phd-button { border:1px solid #c7d3d2; background:#fff; padding:10px 15px; border-radius:8px; cursor:pointer; font-size:.86rem; font-weight:600; display:inline-flex; align-items:center; justify-content:center; text-decoration:none; color:#203b45; }
+.phd-app button:hover,.phd-button:hover { background:#eaf1ec; }
+.phd-app button:disabled { opacity:.5; cursor:default; }
+.phd-app .phd-primary { color:white; background:#24645d; border-color:#24645d; }
+.phd-app .phd-primary:hover { background:#194e48; }
+.phd-app label { display:block; font-size:.8rem; font-weight:600; }
+.phd-app input:not([type=checkbox]):not([type=file]),.phd-app select,.phd-app textarea { display:block; width:100%; min-width:0; background:white; color:#203b45; border:1px solid #bdcccb; border-radius:7px; padding:10px; margin-top:7px; font-size:.9rem; font-weight:400; }
+.phd-app textarea { min-height:110px; resize:vertical; }
+.phd-app :focus-visible { outline:3px solid #b66336; outline-offset:3px; }
+.phd-app .phd-file { position:absolute; width:1px; height:1px; overflow:hidden; opacity:0; }
+.phd-button:focus-within { outline:3px solid #b66336; outline-offset:3px; }
+.phd-intro { display:grid; grid-template-columns:1fr 1fr; gap:42px; border-radius:15px; background:#183e45; padding:30px; color:#e5eeea; }
+.phd-intro .phd-eyebrow { color:#b6dacf; }
+.phd-intro h2 { color:white; font-family:Georgia,serif; font-size:1.7rem; font-weight:400; }
+.phd-intro p { font-size:.91rem; }
+.phd-tabs { display:flex; gap:6px; padding:24px 0 18px; overflow:auto; border-bottom:1px solid #ccd5d0; }
+.phd-tabs button { white-space:nowrap; background:transparent; border-color:transparent; }
+.phd-tabs button[aria-pressed=true] { color:white; background:#24645d; }
+.phd-filters { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:14px; padding:22px 0 6px; }
+.phd-app .phd-caption { font-size:.78rem; color:#596e72; line-height:1.6; margin:14px 0; }
+.phd-list { display:grid; gap:20px; margin-top:20px; }
+.phd-card { background:#fff; border:1px solid #d7dfd9; border-radius:13px; padding:27px; box-shadow:0 5px 20px #193c4405; }
+.phd-card-top { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; }
+.phd-card-top>label { flex:0 0 150px; }
+.phd-card h2 { font-size:1.28rem; }
+.phd-app .phd-institution { color:#387269; font-size:.84rem; font-weight:650; margin:16px 0 3px; }
+.phd-tags { display:flex; gap:7px; flex-wrap:wrap; }
+.phd-tags span { font-size:.71rem; background:#eef1ed; border-radius:5px; padding:5px 9px; font-weight:650; }
+.phd-tags .phd-good { color:#235b48; background:#e6f2e6; }
+.phd-tags .phd-check { color:#83491e; background:#fff0d8; }
+.phd-facts { display:grid; grid-template-columns:1fr 1.1fr .9fr 1.4fr; gap:24px; border-block:1px solid #e0e6e0; padding:21px 0; margin:20px 0; }
+.phd-facts p { font-size:.87rem; line-height:1.5; }
+.phd-facts small { display:block; font-size:.74rem; line-height:1.5; color:#5d7073; }
+.phd-facts .phd-rand { color:#985528; margin-top:9px; font-weight:650; }
+.phd-next { font-size:.9rem; margin-bottom:18px!important; }
+.phd-detail { margin-top:22px; border-top:1px solid #dee6df; padding-top:16px; }
+.phd-app summary { cursor:pointer; font-size:.9rem; font-weight:650; }
+.phd-detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; padding:24px 0 0; }
+.phd-detail-grid h3 { margin-top:18px; }
+.phd-detail-grid p { font-size:.87rem; }
+.phd-app .phd-checklist { display:flex; gap:11px; align-items:flex-start; padding:11px 0; border-bottom:1px solid #eef0eb; font-weight:400; font-size:.87rem; line-height:1.5; }
+.phd-checklist input { margin-top:4px; width:16px; height:16px; flex-shrink:0; accent-color:#24645d; }
+.phd-field { margin-top:20px; }
+.phd-master { display:grid; grid-template-columns:1fr 1fr; gap:0 30px; margin-top:22px; }
+.phd-rates { margin-top:30px; background:#eeefe8; box-shadow:none; }
+.phd-rates p { font-size:.82rem; }
+.phd-rate-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:18px; }
+.phd-footer { text-align:center; font-size:.76rem; color:#5b7071; padding-top:30px; line-height:1.6; }
+.phd-notice { background:#fff0d8; border:1px solid #d9b489; padding:18px; margin:20px 0; border-radius:10px; }
+.phd-add { margin-top:24px; display:grid; gap:12px; }
+.phd-empty { padding:40px; border:1px dashed #abbdb3; border-radius:12px; text-align:center; }
+.phd-app pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.75rem; padding:14px; background:#f5f6f1; }
+@media(max-width:900px) { .phd-header { flex-direction:column; }.phd-header .phd-actions { max-width:none; }.phd-facts,.phd-filters { grid-template-columns:1fr 1fr; }.phd-intro { gap:24px; } }
+@media(max-width:600px) { .phd-shell { padding:26px 14px; }.phd-intro,.phd-detail-grid,.phd-master { grid-template-columns:1fr; gap:20px; }.phd-card { padding:20px; }.phd-card-top { flex-direction:column; }.phd-card-top>label { flex:auto; width:100%; }.phd-facts { gap:20px; }.phd-filters { grid-template-columns:1fr; }.phd-rate-grid { grid-template-columns:1fr 1fr; }.phd-intro { padding:24px; } }

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mayimunah’s Application Tracker",
-  description: "A private PhD and research opportunity command centre.",
+  title: "Mayimunah's PHD Applications tracker",
+  description: "PhD applications, document preparation and start-date planning.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
