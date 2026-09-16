@@ -86,3 +86,56 @@ button,input,textarea { font:inherit; }
 .phd-app pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.75rem; padding:14px; background:#f5f6f1; }
 @media(max-width:900px) { .phd-header { flex-direction:column; }.phd-header .phd-actions { max-width:none; }.phd-facts,.phd-filters { grid-template-columns:1fr 1fr; }.phd-intro { gap:24px; } }
 @media(max-width:600px) { .phd-shell { padding:26px 14px; }.phd-intro,.phd-detail-grid,.phd-master { grid-template-columns:1fr; gap:20px; }.phd-card { padding:20px; }.phd-card-top { flex-direction:column; }.phd-card-top>label { flex:auto; width:100%; }.phd-facts { gap:20px; }.phd-filters { grid-template-columns:1fr; }.phd-rate-grid { grid-template-columns:1fr 1fr; }.phd-intro { padding:24px; } }
+
+/* Comfortable reading palettes. Change these variables to customise the colours. */
+.phd-app {
+  --phd-bg:#dbe4df; --phd-card:#eaf0e9; --phd-input:#f0f3ed;
+  --phd-text:#203b35; --phd-muted:#496158; --phd-line:#b8c9be;
+  --phd-tag:#d6e2d8; --phd-link:#245c4f; --phd-warn-bg:#f0e1c9;
+  --phd-warn:#744016; --phd-red:#a4232b; --phd-red-bg:#f4e3de;
+  background:var(--phd-bg); color:var(--phd-text); color-scheme:light;
+}
+.phd-app[data-theme=sand] {
+  --phd-bg:#e3d9ca; --phd-card:#efe6d8; --phd-input:#f3eddf;
+  --phd-text:#383a2e; --phd-muted:#625d4c; --phd-line:#cbbfa8;
+  --phd-tag:#e0d8c6; --phd-link:#385e4d; --phd-red-bg:#f0dcd4;
+}
+.phd-app[data-theme=dark] {
+  --phd-bg:#172523; --phd-card:#243530; --phd-input:#1c2c27;
+  --phd-text:#e1e9dc; --phd-muted:#b1c4b6; --phd-line:#485f51;
+  --phd-tag:#354b40; --phd-link:#b2d8be; --phd-warn-bg:#493d26;
+  --phd-warn:#f2d49e; --phd-red:#ffaaa8; --phd-red-bg:#422c2b;
+  color-scheme:dark;
+}
+.phd-card,.phd-rates { background:var(--phd-card); border-color:var(--phd-line); }
+.phd-app button,.phd-app .phd-button { background:var(--phd-input); border-color:var(--phd-line); color:var(--phd-text); }
+.phd-app button:hover,.phd-app .phd-button:hover { background:var(--phd-tag); }
+.phd-app input:not([type=checkbox]):not([type=file]),.phd-app select,.phd-app textarea { background:var(--phd-input); color:var(--phd-text); border-color:var(--phd-line); }
+.phd-app input::placeholder,.phd-app textarea::placeholder { color:var(--phd-muted); opacity:1; }
+.phd-app h3,.phd-app .phd-caption,.phd-facts small,.phd-footer { color:var(--phd-muted); }
+.phd-app .phd-eyebrow,.phd-app .phd-institution { color:var(--phd-link); }
+.phd-intro .phd-eyebrow { color:#b6dacf; }
+.phd-facts,.phd-detail,.phd-tabs,.phd-app .phd-checklist { border-color:var(--phd-line); }
+.phd-tags span { background:var(--phd-tag); }
+.phd-tags .phd-good { color:var(--phd-link); background:var(--phd-tag); }
+.phd-tags .phd-check,.phd-notice { color:var(--phd-warn); background:var(--phd-warn-bg); }
+.phd-tags button { font-size:.71rem; padding:5px 9px; border-radius:5px; }
+.phd-app .phd-primary,.phd-tabs button[aria-pressed=true] { color:#fff; background:#24645d; border-color:#24645d; }
+.phd-app .phd-primary:hover { background:#194e48; }
+.phd-facts .phd-rand { color:var(--phd-warn); }
+.phd-app pre { background:var(--phd-input); }
+.phd-appearance,.phd-sort { display:flex; align-items:center; flex-wrap:wrap; gap:18px; margin:18px 0; }
+.phd-appearance>label,.phd-sort>label { min-width:180px; }
+.phd-sort .phd-caption { flex:1; min-width:200px; }
+.phd-card-controls { flex:0 0 200px; display:grid; gap:14px; }
+.phd-app .phd-countdown { color:var(--phd-red); font-weight:750; font-size:1.02rem; margin:20px 0 14px; }
+.phd-reference { background:var(--phd-red-bg); color:var(--phd-red); border-left:4px solid var(--phd-red); padding:15px 18px; border-radius:7px; font-size:.86rem; }
+.phd-reference p { margin:5px 0; }
+.phd-reference a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.phd-reference .phd-ref-date { font-weight:700; }
+.phd-reference .phd-checklist { border:0; padding-bottom:0; }
+.phd-reference-done { background:var(--phd-tag); color:var(--phd-link); border-color:var(--phd-link); }
+.phd-confirmation { background:var(--phd-input); border:1px solid var(--phd-line); padding:22px; margin-top:20px; border-radius:10px; font-size:.88rem; }
+.phd-confirmation[hidden] { display:none; }
+.phd-app :is(p,h2,strong,small,a,summary) { overflow-wrap:anywhere; }
+@media(max-width:600px) { .phd-card-controls { flex:auto; width:100%; grid-template-columns:1fr 1fr; }.phd-appearance,.phd-sort { align-items:stretch; }.phd-appearance>label,.phd-sort>label { width:100%; }.phd-reference { padding:13px; }.phd-confirmation { padding:16px; } }
